@@ -1,0 +1,148 @@
+@media only screen and (min-width: 0) {
+  ul.gifts-group{
+    flex-direction: column;
+  }
+  dl.lager-member-layout{
+    grid-template-columns: 1fr;
+    dd{
+      &:nth-child(1){
+        display: none;
+      }
+      &:nth-child(2){
+        padding: 1em;
+      }
+    }
+  }
+  ul.old-player{
+    li{
+      width: 100%;
+    }
+  }
+  ul.five-year-note{
+    padding: 0 0 0 1em;
+  }
+  .input-bar{
+    display: grid;
+    grid-template-columns: 124px 1fr;
+  }
+  .design-container{
+    padding-top: 9em;
+  }
+  dl.chat{
+    margin: 0 auto;
+    max-width: 100%;
+    &::before{
+      // display: none;
+      transform: rotate(-90deg);
+      top: -69px;
+      right: calc(50% - 123px);
+    }
+  }
+  figure.tu{
+    top: 0;
+    right: calc(50% - 130px);
+  }
+  dl.gift-content{
+    flex-direction: column;
+  }
+  section.gifts-info{
+    article{
+      &:nth-child(even){
+        dl.gift-content{
+          dd{
+            &:nth-child(1){
+              order: initial;
+            }
+            &:nth-child(2){
+              order: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer{
+    font-size: 12px;
+    >span{
+      display: block;
+    }
+  }
+}
+@media only screen and (min-width: 500px) {
+  dl.lager-member-layout{
+    grid-template-columns: 194px 1fr;
+    dd{
+      &:nth-child(1){
+        display: initial;
+      }
+      &:nth-child(2){
+        padding: 1em 1em 1em 0;
+      }
+    }
+  }
+  ul.old-player{
+    li{
+      width: 200px;
+    }
+  }
+  ul.five-year-note{
+    padding: 0 0 0 1.5em;
+  }
+  .input-bar{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+  dl.gift-content{
+    flex-direction: row;
+  }
+  section.gifts-info{
+    article{
+      &:nth-child(even){
+        dl.gift-content{
+          dd{
+            &:nth-child(1){
+              order: 2;
+            }
+            &:nth-child(2){
+              order: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer{
+    font-size: unset;
+    >span{
+      display: initial;
+    }
+  }
+}
+@media only screen and (min-width: 600px) {
+  ul.gifts-group{
+    flex-direction: row;
+  }
+  ul.five-year-note{
+    padding: 0 0 0 2em;
+  }
+}
+
+@media only screen and (min-width: 720px){
+  .design-container{
+    padding-top: unset;
+  }
+  dl.chat{
+    margin: unset;
+    max-width: 500px;
+    &::before{
+      display: block;
+      transform: unset;
+      top: calc(50% - 23px);
+      right: -94px;
+    }
+  }
+  figure.tu{
+    top: -78px;
+    right: -80px;
+  }
+}

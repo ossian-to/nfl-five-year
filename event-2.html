@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>童話：歡慶復甦5周年，重返童話，再續王國復甦，老玩家回歸，即可獲得豐富專屬獎勵!</title>
+
+  <!-- FB 社群分享 -->
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="童話：歡慶復甦5周年，重返童話，再續王國復甦，老玩家回歸，即可獲得豐富專屬獎勵!">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="童話的新玩家、老玩家齊聚一堂，共同歡慶復甦5周年，我們準備了多項活動及好禮，歡迎您來參加。">
+  <meta property="og:url" content="活動網址">
+  <meta property="og:image" content="活動網址/assets/images/fb-1200x630.png"><!--圖檔路徑需改成絕對路徑-->
+  <meta property="og:site_name" content="童話：歡慶復甦5周年，重返童話，再續王國復甦，老玩家回歸，即可獲得豐富專屬獎勵!">
+
+  <script src="assets/js/sweetalert2.js"></script>
+  <link rel="stylesheet" href="assets/css/all.css?v=1">
+</head>
+
+<body>
+  <div class="ossian">
+
+
+
+    <!-- 置頂的導覽 Bar.......................................... -->
+    <label for="menu-switch" class="switch-open"></label>
+    <input type="checkbox" id="menu-switch">
+    <div class="nav-bar">
+      <nav class="nav-container">
+        <label for="menu-switch" class="switch-close"></label>
+        <ul class="nav">
+          <li><a href="index.html">玩家好禮</a></li>
+          <li><a href="event-2.html" class="focus">五周年簽到禮</a></li>
+          <li><a href="event-3.html">五周年嘉年華</a></li>
+          <li><a href="event-4.html">童話留言板</a></li>
+          <li><a href="event-5.html">全新幻獸</a></li>
+          <li><a href="event-6.html">幻獸設計大賽</a></li>
+        </ul>
+        <ul class="share-tool">
+          <li class="icon-home"><a href="https://nfl.lager.com.tw/event/nfl_ob/index.html" target="_blank"></a></li>
+          <li class="icon-member"><a href="https://member.lager.com.tw/index/register" target="_blank"></a></li>
+          <li class="icon-facebook"><a href="https://www.facebook.com/groups/2438257642852769" target="_blank"></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- 置頂的導覽 Bar 結束..................................... -->
+
+
+
+    <!-- 網站標題................................................ -->
+    <figure class="site-title">
+      <img src="assets/images/site-title.png" alt="歡慶復甦5周年，重返童話，再續王國復甦，老玩家回歸，即可獲得豐富專屬獎勵！">
+    </figure>
+    <!-- 網站標題結束............................................ -->
+
+
+
+    <!-- 雷爵會員................................................ -->
+    <div class="lager-member">
+      <dl class="lager-member-layout">
+        <dd>
+          <figure class="nan-gua"><img src="assets/images/nan-gua.png" alt="南瓜"></figure>
+        </dd>
+        <dd>
+          <!-- 
+            系統需要做下面的判斷
+            1. 判斷是否登入雷爵會員，
+            2. 如果沒有登入則顯示 .login-lager，
+            3. 如果有登入則顯示 .gift-status
+          -->
+          <a href="https://member.lager.com.tw/index/register" target="_blank" class="login-lager">登入雷爵會員</a>
+          <div class="gift-status">
+            <h3 class="member-id">ABCD12345</h3>
+            <div class="gift-info">
+              <div class="msg">每天都有好禮可以領取喔。</div>
+            </div>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <!-- 雷爵會員結束............................................. -->
+
+
+
+    <!-- 五周年簽到禮............................................. -->
+    <section class="player-gifts five-year">
+      <article>
+        <figure class="player-gift-title"><img src="assets/images/title-2.png" alt="五周年簽到禮"></figure>
+        <h3><em>活動時間：</em>2024/3/27-4/10 (10號前可補簽)。</h3>
+        <dl class="five-year-gifts">
+          <dt>活動需知</dt>
+          <dd>
+            <ul class="five-year-note">
+              <li>每天可簽到一次，每次簽到可獲得當日獎勵，累計共簽滿十四天可獲得簽到大禮【寵物降級可樂*1】</li>
+              <li>玩家若錯過當日簽到，可扣除<em>5雷爵點數</em>進行補簽。</li>
+              <li>簽到後，可至『置物櫃』中領取獎勵。『獎勵』從置物櫃領出後，「第一個登入遊戲的角色」將會自動領取。如果開錯角色登入領取到『獎勵』無轉移服務。</li>
+            </ul>
+          </dd>
+        </dl>
+      </article>
+    </section>
+    <!-- 五周年簽到禮結束......................................... -->
+
+
+
+    <!-- 14日簽到禮.............................................. -->
+    <section class="sign-in-gifts">
+      <article>
+        <ul class="sign-in-section">
+          <!-- 01 超級傳送粉末 -->
+          <li>
+            <!-- 
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward received">
+              <dt class="reward-date">3/27</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-1.png" alt="14日簽到禮">
+                  <figcaption>超級傳送粉末<br>(綁)</figcaption>
+                </figure>
+                <button class="btn">已領取</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 02 孤獨戰鬥娃娃 -->
+          <li>
+            <!-- 
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward received">
+              <dt class="reward-date">3/28</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-2.png" alt="14日簽到禮">
+                  <figcaption>孤獨戰鬥娃娃<br>(綁)</figcaption>
+                </figure>
+                <button class="btn">已領取</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 04 TURBO工作娃娃 -->
+          <li>
+            <!-- 
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward received">
+              <dt class="reward-date">3/29</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-3.png" alt="14日簽到禮">
+                  <figcaption>TURBO工作娃娃<br>(綁)</figcaption>
+                </figure>
+                <button class="btn">已領取</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 04 1日祝福卡 -->
+          <li>
+            <!-- 
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward re-signing">
+              <dt class="reward-date">3/30</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-4.png" alt="14日簽到禮">
+                  <figcaption>1日祝福卡</figcaption>
+                </figure>
+                <button class="btn">我要補簽</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 05 1日祝福卡 -->
+          <li>
+            <!-- 
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward re-signing">
+              <dt class="reward-date">3/31</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-5.png" alt="14日簽到禮">
+                  <figcaption>SP寵物甜心糖</figcaption>
+                </figure>
+                <button class="btn">我要補簽</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 06 孤獨經驗娃娃 -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward re-signing">
+              <dt class="reward-date">4/1</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-6.png" alt="14日簽到禮">
+                  <figcaption>孤獨經驗娃娃<br>(綁)</figcaption>
+                </figure>
+                <button class="btn">我要補簽</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 07 變身藥水 (綁定) -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward re-signing">
+              <dt class="reward-date">4/2</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-7.png" alt="14日簽到禮">
+                  <figcaption>變身藥水<br>(綁定)</figcaption>
+                </figure>
+                <button class="btn">我要補簽</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 08 SP屬性調整藥丸 -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward re-signing">
+              <dt class="reward-date">4/3</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-8.png" alt="14日簽到禮">
+                  <figcaption>SP屬性調整藥丸</figcaption>
+                </figure>
+                <button class="btn">我要補簽</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 09 孤獨幻獸加油棒 -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward receive">
+              <dt class="reward-date">4/4</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-9.png" alt="14日簽到禮">
+                  <figcaption>孤獨幻獸加油棒<br>(綁)</figcaption>
+                </figure>
+                <button class="btn">領取獎勵</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 10 SP青銅軟糖 -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward not-started">
+              <dt class="reward-date">4/5</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-10.png" alt="14日簽到禮">
+                  <figcaption>SP青銅軟糖</figcaption>
+                </figure>
+                <button class="btn">活動未開始</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 11 75%消毒酒精(台灣製造)(綁) -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward not-started">
+              <dt class="reward-date">4/6</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-11.png" alt="14日簽到禮">
+                  <figcaption>75%消毒酒精<br>(台灣製造)(綁)</figcaption>
+                </figure>
+                <button class="btn">活動未開始</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 12 超級工作娃娃(綁) -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward not-started">
+              <dt class="reward-date">4/7</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-12.png" alt="14日簽到禮">
+                  <figcaption>超級工作娃娃<br>(綁)</figcaption>
+                </figure>
+                <button class="btn">活動未開始</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 13 闇黑水晶*40 -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward event-ends">
+              <dt class="reward-date">4/8</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-13.png" alt="14日簽到禮">
+                  <figcaption>闇黑水晶*40</figcaption>
+                </figure>
+                <button class="btn">活動結束</button>
+              </dd>
+            </dl>
+          </li>
+          <!-- 14 7日祝福卡 -->
+          <li>
+            <!--
+              <dl class="reward"> 共有五種狀態，分別如下：
+              1. <dl class="reward not-started"> 或 <dl class="reward">     活動未開始 (預設值)
+              2. <dl class="reward received">                               已領取
+              3. <dl class="reward re-signing">                             我要補簽
+              4. <dl class="reward event-ends">                             活動結束
+              5. <dl class="reward receive">                                領取獎勵
+            -->
+            <dl class="reward event-ends">
+              <dt class="reward-date">4/9</dt>
+              <dd class="reward-gift">
+                <figure>
+                  <img src="assets/images/rewards/reward-14.png" alt="14日簽到禮">
+                  <figcaption>7日祝福卡</figcaption>
+                </figure>
+                <button class="btn">活動結束</button>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <!-- 14日簽到禮結束.......................................... -->
+
+
+
+    <!-- footer.................................................. -->
+    <footer>雷爵網絡科技股份有限公司 <span>&copy;
+        <script>const year = new Date(); document.write(year.getFullYear());</script> Lager Network Technologies Inc.
+      </span> All rights reserved.</footer>
+    <!-- footer end.............................................. -->
+
+
+  </div><!--.ossian end-->
+
+
+
+
+
+  <script>
+
+
+  // 判斷是否有登錄會員和14日簽到活動 .............................................
+  fetch('setting.json')  // 讀取 json
+  .then(response => response.json())
+  .then(setting => {
+    // 取得元素
+    const loginLink = document.querySelector('.login-lager');
+    const giftStatus = document.querySelector('.gift-status');
+
+    // 根據 memberStatus 的值設定樣式
+    if (setting.memberStatus) {            // 如果已經登入雷爵會員的情況
+      loginLink.style.display = 'none';    // 關閉登入的按鈕
+      giftStatus.style.display = 'block';  // 顯示歡迎資訊
+    } else {                               // 如果未登入雷爵會員的情況
+      loginLink.style.display = 'block';   // 開啟登入的按鈕
+      giftStatus.style.display = 'none';   // 關閉歡迎資訊
+    }
+
+    // 14日簽到活動 ..................................................
+    const rewards = [
+      "超級傳送粉末",
+      "孤獨戰鬥娃娃",
+      "TURBO工作娃娃",
+      "1日祝福卡",
+      "SP寵物甜心糖",
+      "孤獨經驗娃娃",
+      "變身藥水",
+      "SP屬性調整藥丸",
+      "孤獨幻獸加油棒",
+      "SP青銅軟糖",
+      "75%消毒酒精(台灣製造)",
+      "超級工作娃娃",
+      "闇黑水晶*40",
+      "7日祝福卡",
+    ];
+
+    const rewardElements = document.querySelectorAll(".reward");
+
+    rewardElements.forEach((rewardElement, index) => {
+      const button = rewardElement.querySelector(".btn");
+      const rewardStatus = rewardElement.classList[1];
+
+      switch (rewardStatus) {
+        case "not-started":
+          button.textContent = "活動未開始";
+          button.disabled = true;
+          break;
+        case "received":
+          button.textContent = "已領取";
+          button.disabled = true;
+          break;
+        case "event-ends":
+          button.textContent = "活動結束";
+          button.disabled = true;
+          break;
+        case "re-signing":
+          button.textContent = "我要補簽";
+          button.addEventListener("click", function () {
+            if (setting.memberStatus === true) {
+              // 呼叫 sweetalert2.js 顯示得獎內容
+              Swal.fire({
+                icon: "warning",
+                title: "注意!",
+                html: "補簽需扣除<span style='color: #f75050;'>5雷爵點數</span>",
+                confirmButtonText: "同意",
+              }).then((result) => {
+                console.log(result);
+                if (result.isConfirmed) {
+                  Swal.fire({
+                    icon: "success",
+                    title: "成功補簽",
+                    html: `得獎內容：<span style="color: #f75050;">${rewards[index]}</span>`,
+                    confirmButtonText: "確認",
+                  }).then(() => {
+                    rewardElement.classList.remove("re-signing");
+                    rewardElement.classList.add("received");
+                    button.textContent = "已領取";
+                  });
+                }
+              });
+            } else {
+              Swal.fire({
+                icon: "info",
+                title: "請登入雷爵會員",
+                confirmButtonText: "確認",
+              });
+            }
+          });
+          break;
+        case "receive":
+          button.textContent = "領取獎勵";
+          button.addEventListener("click", function () {
+            if (setting.memberStatus === true) {
+              Swal.fire({
+                title: "成功領取",
+                html: `得獎內容：<span style="color: #f75050;">${rewards[index]}</span>`,
+                icon: "success",
+                confirmButtonText: "確認",
+              }).then(() => {
+                rewardElement.classList.remove("receive");
+                rewardElement.classList.add("received");
+                button.textContent = "已領取";
+              });
+            } else {
+              Swal.fire({
+                icon: "info",
+                title: "請登入雷爵會員",
+                confirmButtonText: "確認",
+              });
+            }
+          });
+          break;
+        default:
+          // 預設情況
+          button.textContent = "活動未開始";
+          button.disabled = true;
+          break;
+      }
+    });
+  })
+  .catch(error => {
+    console.error('Error loading setting.json:', error);
+    // 使用 SweetAlert2.js 顯示錯誤訊息
+    Swal.fire({
+      icon: "info",
+      title: "JSON 錯誤",
+      confirmButtonText: "確認",
+    });
+  });
+  // 判斷是否有登錄會員和14日簽到活動結束.............................................
+
+  </script>
+
+
+
+</body>
+
+</html>
