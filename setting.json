@@ -1,6 +1,6 @@
 {
-  "memberStatus": true,
-  "getGiftA": true,
+  "memberStatus": false,
+  "getGiftA": false,
   "getGiftB": true,
   "getGiftC": true,
   "getGiftD": true,

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh-TW">
 
   <head>
     <meta charset="UTF-8">
@@ -185,7 +185,7 @@
                   擁有老童話會員帳號，使用同帳號在活動開始後創建《童話：王國復甦》帳號，此新帳號內的任一角色達"<strong>60級</strong>"可獲得"<em>回歸禮D</em>"</div>
                 <button class="btn" id="giftD">領取回歸禮D</button>
               </div>
-            <!-- 
+              <!-- 
               <li class="gifts"> 共有五種狀態，分別如下：
               1. <li class="gifts not-started"> 或 <li class="gifts">      活動未開始 (預設值)
               2. <li class="gifts received">                               已領取
@@ -280,163 +280,27 @@
     <script>
 
 
-      // 判斷是否有登錄會員.............................................
-      fetch('setting.json') // 讀取 setting.json
-        .then(response => response.json())
-        .then(setting => {
-          const loginLink = document.querySelector('.login-lager');
-          // const btn = document.querySelector('.btn');
-          const giftStatus = document.querySelector('.gift-status');
-          const giftIds = ['giftA', 'giftB', 'giftC', 'giftD', 'giftE', 'giftF', 'giftG'];
+      document.addEventListener("DOMContentLoaded", function () {
+        // 使用fetch API讀取setting.json
+        fetch('setting.json')
+          .then(response => response.json())
+          .then(data => {
+            // 取得setting.json中的memberStatus值
+            var memberStatus = data.memberStatus;
 
-          const giftsElements = document.querySelectorAll(".gifts");
-          giftsElements.forEach((rewardElement, index) => {
-            const button = rewardElement.querySelector(".btn");
-            const liStatus = rewardElement.classList[1];
-            switch (liStatus) {
-              case "not-started":
-                button.textContent = "活動未開始";
-                button.disabled = true;
-                break;
-              case "event-ends":
-                button.textContent = "活動結束";
-                button.disabled = true;
-                break;
-              case "received":
-                button.textContent = "已領取";
-                button.disabled = true;
-                break;
-              case "receive":
-                button.textContent = "領取獎勵";
-                break;
-              default:
-                button.textContent = "活動未開始";
-                button.disabled = true;
-              }
-          });
-
-
-          if (setting.memberStatus) {  // 有登陸雷爵會員的情況
-            loginLink.style.display = 'none';
-            giftStatus.style.display = 'block';
-
-            giftIds.forEach(giftId => {
-              const giftButton = document.getElementById(giftId);  // 按鈕物件
-              if (giftButton) {
-                giftButton.addEventListener('click', (event) => {
-
-                  const giftKey = `getGift${giftId.charAt(giftId.length - 1).toUpperCase()}`;  // 得到 getGiftA...G
-                  const word = giftId.charAt(giftId.length - 1).toUpperCase();                 // A...G
-
-                  if (setting[giftKey]) {
-                    switch (word) {
-                      case 'A':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '忠誠禮A',
-                          html: "<ul><li>新頭銜</li><li>7日祝福卡*4</li><li>寵物愛心棒*10</li><li>寵物鞭打棒*10</li></ul>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      case 'B':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '回歸禮B',
-                          html: "<ul><li>新道具：回歸之心</li><li>健保卡*2</li><li>經驗娃娃*4(綁)</li></ul>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      case 'C':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '回歸禮C',
-                          html: "<ul><li>7日祝福卡*4</li><li>Turbo工作娃娃(綁)*5</li><li>公開頻道對講機*1</li></ul>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      case 'D':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '回歸禮D',
-                          html: "<ul><li>月光光寶盒2.0</li></ul><div style='padding: 1em 0 0 1em;'>(<strong>內含：</strong>2w可因、小藍貓的祝福x2、二級封印壺x1、健保卡x3、寵物親親糖x20及低階經驗娃娃x1)</div>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      case 'E':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '回歸禮E',
-                          html: "<ul><li>時光強化禮包</li></ul><div style='padding: 1em 0 0 1em;'>(<strong>內含：</strong>高級戰鬥娃娃*2、超級幻獸加油棒*5、寵物愛心棒*5、寵物鞭打棒*5、健保卡*10、TURBO工作娃娃*5、寵物降級果汁*5、神奇合成券*5、屬性調整藥丸*1、隨機的變身藥水*5)</div>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      case 'F':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '回歸禮F',
-                          html: "<ul><li>幻獸：登山雪怪</li><li>頭銜：雪怪好朋友</li></ul>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      case 'G':
-                        Swal.fire({
-                          icon: 'success',
-                          title: '新手禮G',
-                          html: "<ul><li>3日祝福卡*1</li><li>高級戰鬥娃娃(綁)*3</li><li>變身藥水(綁)*1</li><li>75%消毒酒精(台灣製造)(綁)*5</li></ul>",
-                          confirmButtonText: '確認',
-                        });
-                        break;
-                      default:
-                        Swal.fire({
-                          icon: 'error',
-                          title: `您不符合領取資格`,
-                          confirmButtonText: '確認',
-                        });
-                    }
-                  } else {
-                    Swal.fire({
-                      icon: 'error',
-                      title: `您不符合領取資格`,
-                      confirmButtonText: '確認',
-                    });
-                  }
-                });
-              }
-            });
-          } else {  // 未登入雷爵會員的狀態
-
-            loginLink.style.display = 'block';
-            giftStatus.style.display = 'none';
-
-            giftIds.forEach(giftId => {
-              const giftButton = document.getElementById(giftId);
-              if (giftButton) {
-                giftButton.addEventListener('click', () => {
-                  giftButton.disabled = true;
-                  Swal.fire({
-                    icon: 'info',
-                    title: '請登入雷爵會員',
-                    confirmButtonText: '確認',
-                  }).then((result) => {
-                    giftButton.disabled = false;
-                  });
-                });
-              }
-            });
-          }
-        })
-        .catch(error => {
-          console.error('Error loading setting.json:', error);
-          // 顯示JSON錯誤訊息
-          Swal.fire({
-            icon: 'info',
-            title: 'JSON 錯誤',
-            confirmButtonText: '確認',
-          });
-        });
-      // 判斷是否有登錄會員結束..........................................
-
-
+            // 根據memberStatus的值來設定CSS樣式
+            if (memberStatus) {
+              // 當memberStatus為true時
+              document.querySelector(".login-lager").style.display = "block";
+              document.querySelector(".gift-status").style.display = "none";
+            } else {
+              // 當memberStatus為false時
+              document.querySelector(".login-lager").style.display = "none";
+              document.querySelector(".gift-status").style.display = "block";
+            }
+          })
+          .catch(error => console.error('Error fetching setting.json:', error));
+      });
 
     </script>
 

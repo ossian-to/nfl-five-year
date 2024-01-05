@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 
 <head>
   <meta charset="UTF-8">
@@ -204,44 +204,44 @@
 
     // 判斷是否有登錄會員.............................................
     fetch('setting.json') // 讀取 setting.json
-    .then(response => response.json())
-    .then(setting => {
+      .then(response => response.json())
+      .then(setting => {
 
-      // 取得元素
-      const loginLink = document.querySelector('.login-lager');
-      const giftStatus = document.querySelector('.gift-status');
-      const bitMessage = document.querySelector('.message');
+        // 取得元素
+        const loginLink = document.querySelector('.login-lager');
+        const giftStatus = document.querySelector('.gift-status');
+        const bitMessage = document.querySelector('.message');
 
-      // 根據 memberStatus 的值設定樣式
-      if (setting.memberStatus) {            // 如果已經登入雷爵會員的情況
-        loginLink.style.display = 'none';    // 關閉登入的按鈕
-        giftStatus.style.display = 'block';  // 顯示歡迎資訊
-      } else {                               // 如果未登入雷爵會員的情況
-        loginLink.style.display = 'block';   // 開啟登入的按鈕
-        giftStatus.style.display = 'none';   // 關閉歡迎資訊
-        
-        // 點選 bitMessage 時，顯示「請先登入雷爵會員」的訊息
-        bitMessage.addEventListener('mousedown', () => {
-          bitMessage.disabled = true;
-          Swal.fire({
-            icon: 'info',
-            title: '請登入雷爵會員',
-            confirmButtonText: '確認',
-          }).then((result) => {
-            bitMessage.disabled = false;
+        // 根據 memberStatus 的值設定樣式
+        if (setting.memberStatus) {            // 如果已經登入雷爵會員的情況
+          loginLink.style.display = 'none';    // 關閉登入的按鈕
+          giftStatus.style.display = 'block';  // 顯示歡迎資訊
+        } else {                               // 如果未登入雷爵會員的情況
+          loginLink.style.display = 'block';   // 開啟登入的按鈕
+          giftStatus.style.display = 'none';   // 關閉歡迎資訊
+
+          // 點選 bitMessage 時，顯示「請先登入雷爵會員」的訊息
+          bitMessage.addEventListener('mousedown', () => {
+            bitMessage.disabled = true;
+            Swal.fire({
+              icon: 'info',
+              title: '請登入雷爵會員',
+              confirmButtonText: '確認',
+            }).then((result) => {
+              bitMessage.disabled = false;
+            });
           });
+        }
+      })
+      .catch(error => {
+        console.error('Error loading setting.json:', error);
+        // 使用 SweetAlert2.js 顯示錯誤訊息
+        Swal.fire({
+          icon: "info",
+          title: "JSON 錯誤",
+          confirmButtonText: "確認",
         });
-      }
-    })
-    .catch (error => {
-      console.error('Error loading setting.json:', error);
-      // 使用 SweetAlert2.js 顯示錯誤訊息
-      Swal.fire({
-        icon: "info",
-        title: "JSON 錯誤",
-        confirmButtonText: "確認",
       });
-    });
     // 判斷是否有登錄會員結束..........................................
 
   </script>
