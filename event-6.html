@@ -219,18 +219,6 @@
         } else {                               // 如果未登入雷爵會員的情況
           loginLink.style.display = 'block';   // 開啟登入的按鈕
           giftStatus.style.display = 'none';   // 關閉歡迎資訊
-
-          // 點選 bitMessage 時，顯示「請先登入雷爵會員」的訊息
-          bitMessage.addEventListener('mousedown', () => {
-            bitMessage.disabled = true;
-            Swal.fire({
-              icon: 'info',
-              title: '請登入雷爵會員',
-              confirmButtonText: '確認',
-            }).then((result) => {
-              bitMessage.disabled = false;
-            });
-          });
         }
       })
       .catch(error => {

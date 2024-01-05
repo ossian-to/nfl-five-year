@@ -1,5 +1,5 @@
 {
-  "memberStatus": false,
+  "memberStatus": true,
   "getGiftA": false,
   "getGiftB": true,
   "getGiftC": true,
