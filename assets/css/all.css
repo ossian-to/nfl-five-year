@@ -1496,6 +1496,11 @@ section.player-gifts.design article {
   padding: initial;
   background-image: url(../images/grid.png);
 }
+section.player-gifts.carnivals article {
+  background-image: url(../images/new.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
 
 figure.player-gift-title {
   position: absolute;
@@ -2123,6 +2128,132 @@ dl.gift-content dd:nth-child(2) {
   display: none;
 }
 
+dl.fifth {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+  text-align: initial;
+  background-color: white;
+  border: 1px solid #f8d485;
+  border-radius: 20px;
+}
+
+dl.carnival {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+  text-align: initial;
+  background-color: white;
+  border: 1px solid #f8d485;
+  border-radius: 20px;
+}
+dl.carnival dd {
+  position: relative;
+}
+dl.carnival dd h3 {
+  color: #f75050;
+}
+
+p.flag {
+  padding-left: 0.75em;
+  background-image: url(../images/san-jiao.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+p.flag em {
+  font-style: normal;
+  color: #f75050;
+}
+
+ul.attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5em 0.25em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+}
+ul.attributes.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+ul.attributes li {
+  padding: 0 0.5em;
+  background-color: #fff3b9;
+  border: 1px solid #e7d998;
+  border-radius: 5em;
+  -webkit-box-shadow: 0 1px 0 #fff inset;
+          box-shadow: 0 1px 0 #fff inset;
+}
+ul.attributes li em {
+  font-style: normal;
+  color: #f75050;
+}
+
+dl.objs {
+  margin: 0 auto;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+dl.objs dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: center;
+  width: 100%;
+}
+dl.objs dd figure {
+  margin: 0;
+  padding: 0;
+  max-width: 420px;
+}
+dl.objs dd figure img {
+  width: 100%;
+}
+dl.objs dd .obj-des {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+  background-color: #e5e5e5;
+  background-image: url(../images/jue.png);
+  background-repeat: no-repeat;
+  background-position: center 1em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  bottom: 0;
+}
+dl.objs dd .obj-des h2 {
+  color: #f75050;
+}
+
 footer {
   padding: 2em 1em;
   text-align: center;
@@ -2211,6 +2342,44 @@ footer {
         -ms-flex-order: initial;
             order: initial;
   }
+  dl.carnival {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  dl.carnival dd:nth-child(1) {
+    width: auto;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  dl.carnival dd:nth-child(2) {
+    width: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  dl.carnival dd figure {
+    margin: 0 auto;
+    max-width: 335px;
+    position: initial;
+    top: unset;
+    left: unset;
+  }
+  dl.carnival dd figure img {
+    width: 100%;
+  }
+  dl.objs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 420px;
+  }
+  dl.objs dd {
+    max-width: 420px;
+  }
   footer {
     font-size: 12px;
   }
@@ -2290,5 +2459,41 @@ footer {
   figure.tu {
     top: -78px;
     right: -80px;
+  }
+  dl.carnival {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  dl.carnival dd:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+  }
+  dl.carnival dd:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: auto;
+  }
+  dl.carnival dd figure {
+    margin: initial;
+    position: absolute;
+    top: calc(50% - 224px);
+    left: 0;
+    max-width: unset;
+    width: 335px;
+  }
+  dl.carnival dd figure img {
+    width: unset;
+  }
+  dl.objs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: unset;
   }
 }

@@ -420,6 +420,13 @@ section.player-gifts{
       background-image: url(../images/grid.png);
     }
   }
+  &.carnivals{
+    article{
+      background-image: url(../images/new.png);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+  }
 }
 
 figure.player-gift-title{
@@ -1040,6 +1047,116 @@ dl.gift-content{
 
 .gift-status {
   display: none;
+}
+
+// 五周年嘉年華
+// 活動前言
+
+dl.fifth{
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+  text-align: initial;
+  background-color: white;
+  border: 1px solid #f8d485;
+  border-radius: 20px;
+}
+
+
+// 全新幻獸
+
+dl.carnival{
+  display: flex;
+  // flex-direction: row;
+  gap: 1em;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+  text-align: initial;
+  background-color: white;
+  border: 1px solid #f8d485;
+  border-radius: 20px;
+  dd{
+    position: relative;
+    h3{
+      color: $custom-3;
+    }
+  }
+}
+
+p.flag{
+  padding-left: 0.75em;
+  background-image: url(../images/san-jiao.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  em{
+    font-style: normal;
+    color: $custom-3;
+  }
+}
+
+ul.attributes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.25em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  &.center{
+    justify-content: center;
+  }
+  li{
+    padding: 0 0.5em;
+    background-color: #fff3b9;
+    border: 1px solid #e7d998;
+    border-radius: 5em;
+    box-shadow: 0 1px 0 #fff inset;
+    em{
+      font-style: normal;
+      color: $custom-3;
+    }
+  }
+}
+
+dl.objs{
+  margin: 0 auto;
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  align-items: stretch;
+  justify-content: center;
+  dd{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    figure{
+      margin: 0;
+      padding: 0;
+      max-width: 420px;
+      img{
+        width: 100%;
+      }
+    }
+    .obj-des{
+      flex: 1;
+      padding: 1rem;
+      background-color: #e5e5e5;
+      background-image: url(../images/jue.png);
+      background-repeat: no-repeat;
+      background-position: center 1em;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      bottom: 0;
+      h2{
+        color: $custom-3;
+      }
+    }
+  }
 }
 
 // footer
