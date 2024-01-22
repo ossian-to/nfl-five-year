@@ -2254,6 +2254,52 @@ dl.objs dd .obj-des h2 {
   color: #f75050;
 }
 
+figure.heart-img {
+  padding-top: 0.75em;
+  width: 100%;
+  text-align: center;
+}
+figure.heart-img img.heart {
+  cursor: pointer;
+}
+
+.fixed {
+  margin: 0 auto;
+  padding: 0 0 3em;
+  width: 235px;
+  -webkit-animation: float 1s infinite;
+          animation: float 1s infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 footer {
   padding: 2em 1em;
   text-align: center;
@@ -2495,5 +2541,10 @@ footer {
         -ms-flex-direction: row;
             flex-direction: row;
     max-width: unset;
+  }
+  .fixed {
+    position: fixed;
+    right: 2em;
+    bottom: 4em;
   }
 }

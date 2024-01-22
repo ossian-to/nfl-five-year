@@ -152,7 +152,10 @@
             <li class="gifts receive">
               <figure class="old-player-gift-icon"><img src="assets/images/box-1.png" alt="回歸禮B"></figure>
               <div class="old-player-content">
-                <div class="content-box">擁有老童話會員帳號，使用同帳號在活動開始後創建《童話：王國復甦》帳號，可獲得"<em>回歸禮B</em>"</div>
+                <div class="content-box">
+                  擁有老童話會員帳號，使用同帳號在活動開始後創建《童話：王國復甦》帳號，可獲得"<em>回歸禮B</em>"
+                  <figure class="heart-img"><img src="assets/images/heart.gif" class="heart" alt="回歸之心"></figure>
+                </div>
                 <button class="btn" id="giftB">領取回歸禮B</button>
               </div>
             </li>
@@ -242,6 +245,7 @@
               </figure>
             </li>
           </ul>
+          <div style="color: red; text-align: center;">※僅限台灣地區寄送</div>
           <!-- 實體獎勵結束 -->
         </article>
       </section>
@@ -256,13 +260,19 @@
             <h2>注意事項</h2>
           </hgroup>
           <ul>
-            <li><span>老童話會員帳號標準為 <mark>2024/3/01 以前</mark>尚未申請過童話：王國復甦帳號。</span></li>
+            <li><span>老童話會員帳號標準為 <mark>2024/3/26 以前</mark>尚未申請過童話：王國復甦帳號。</span></li>
             <li><span><mark>回歸禮 B、C、D、E、F</mark> 僅限於曾經擁有老童話會員帳號但從未創建過童話：王國復甦的帳號。</span></li>
             <li><span>所有領取 D、E、F 獎勵過的帳號玩家，可獲得<mark>抽取實體獎勵</mark>的資格，將於活動結束後統一公布得獎名單於官網。</span></li>
           </ul>
         </article>
       </section>
       <!-- 注意事項結束............................................. -->
+
+
+
+    <!-- 右側懸浮Banner............................................. -->
+    <div class="fixed"><a href="gacha-machine.html"><img src="assets/images/water-mark-right.png" alt="專屬客製化主機想要趁現在！"></a></div>
+    <!-- 右側懸浮Banner結束......................................... -->
 
 
 
@@ -334,7 +344,7 @@
                         Swal.fire({
                           icon: 'success',
                           title: '忠誠禮A',
-                          html: "<ul><li>新頭銜</li><li>7日祝福卡*4</li><li>寵物愛心棒*10</li><li>寵物鞭打棒*10</li></ul>",
+                          html: "<ul><li>新頭銜：忠誠的象徵</li><li>7日祝福卡*4</li><li>寵物愛心棒*10</li><li>寵物鞭打棒*10</li></ul>",
                           confirmButtonText: '確認',
                         });
                         break;
@@ -435,6 +445,23 @@
           });
         });
       // 判斷是否有登錄會員結束..........................................
+
+      // 回歸之心的說明.................................................
+      document.addEventListener('DOMContentLoaded', function () {
+        // 取得名為img.heart的圖片元素
+        var heartImage = document.querySelector('img.heart');
+        // 為圖片元素添加點擊事件監聽器
+        heartImage.addEventListener('click', function () {
+          // 使用sweetalert2彈出視窗
+          Swal.fire({
+            icon: 'info',
+            title: '回歸之心',
+            html: '<h3 style="margin-top: 0;">將於 <strong style="color:red">2024/8/31</strong> 後全數回收</h3>' +
+                  '使用後將處於回歸超能狀態，此狀態可使全隊伍每個玩家獲取的人物經驗值額外增加 5%。綁定，不可交易，不可存倉庫與銀行。'
+          });
+        });
+      });
+      // 回歸之心的說明結束.............................................
 
 
 

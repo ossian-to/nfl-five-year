@@ -1159,6 +1159,39 @@ dl.objs{
   }
 }
 
+// 回歸之心說明
+
+figure.heart-img{
+  padding-top: 0.75em;
+  width: 100%;
+  text-align: center;
+  img.heart{
+    cursor: pointer;
+  }
+}
+
+
+// 右側懸浮Banner
+
+.fixed{
+  margin: 0 auto;
+  padding: 0 0 3em;
+  width: 235px;
+  animation: float 1s infinite;
+}
+
+@keyframes float {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(1em);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
 // footer
 
 footer{
