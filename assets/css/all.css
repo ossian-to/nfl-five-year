@@ -1149,6 +1149,9 @@ ul.nav li a {
   background-repeat: no-repeat;
   background-position: top center;
 }
+.ossian.lo {
+  background-image: url(../images/gacha-machine/bg.jpg);
+}
 
 button.btn {
   padding: 0.25em 1em 0.35em 1em;
@@ -1167,6 +1170,17 @@ button.btn {
 }
 .site-title img {
   width: 100%;
+}
+.site-title.lo {
+  padding: 1em;
+  max-width: 768px;
+}
+
+.game-logo {
+  display: block;
+  margin: 0 auto;
+  padding-top: 6em;
+  max-width: 196px;
 }
 
 .lager-member {
@@ -1520,8 +1534,6 @@ figure.player-gift-title + h3 {
 }
 figure.player-gift-title + h3 em {
   color: #f75050;
-  -webkit-animation: color 0.3s infinite;
-          animation: color 0.3s infinite;
 }
 
 @-webkit-keyframes color {
@@ -1811,6 +1823,9 @@ ul.entity-rewards {
   color: white;
   background-color: unset;
 }
+.event-note article > ul li a {
+  color: white;
+}
 
 dl.five-year-gifts {
   overflow: hidden;
@@ -2081,6 +2096,9 @@ ul.design-items {
   margin: 0;
   padding: 0 0 0 1em;
 }
+ul.design-items a {
+  color: #f75050;
+}
 
 section.gifts-info article {
   margin: 0 auto;
@@ -2136,6 +2154,24 @@ dl.fifth {
   background-color: white;
   border: 1px solid #f8d485;
   border-radius: 20px;
+}
+dl.fifth .flash {
+  -webkit-animation: color 0.3s infinite;
+          animation: color 0.3s infinite;
+}
+
+.mouse {
+  margin: 0 auto;
+  padding-top: 1em;
+  max-width: 300px;
+}
+.mouse img {
+  width: 100%;
+}
+.mouse figcaption {
+  padding-top: 0.5em;
+  font-size: 0.75em;
+  text-align: center;
 }
 
 dl.carnival {

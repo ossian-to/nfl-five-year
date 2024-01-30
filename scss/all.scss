@@ -45,6 +45,9 @@ ul.nav{
   background-image: url(../images/demo.png);
   background-repeat: no-repeat;
   background-position: top center;
+  &.lo{
+    background-image: url(../images/gacha-machine/bg.jpg);
+  }
 }
 
 button.btn{
@@ -66,6 +69,19 @@ button.btn{
   img{
     width: 100%;
   }
+  &.lo{
+    padding: 1em;
+    max-width: 768px;
+  }
+}
+
+// 童話 LOGO
+
+.game-logo{
+  display: block;
+  margin: 0 auto;
+  padding-top: 6em;
+  max-width: 196px;
 }
 
 // 登入雷爵會員
@@ -445,10 +461,11 @@ figure.player-gift-title{
     line-height: 1.25;
     em{
       color: $custom-3;
-      animation: color 0.3s infinite;
+      // animation: color 0.3s infinite;
     }
   }
 }
+
 @keyframes color {
   0%{
     color: $custom-3;
@@ -745,6 +762,9 @@ ul.entity-rewards{
             background-color: unset;
           }
         }
+        a{
+          color: white;
+        }
       }
     }
   }
@@ -997,6 +1017,9 @@ dl.design-note{
 ul.design-items{
   margin: 0;
   padding: 0 0 0 1em;
+  a{
+    color: $custom-3;
+  }
 }
 
 // 獎品資訊
@@ -1060,8 +1083,26 @@ dl.fifth{
   background-color: white;
   border: 1px solid #f8d485;
   border-radius: 20px;
+  .flash{
+    animation: color 0.3s infinite;
+  }
 }
 
+// 滑鼠墊
+
+.mouse{
+  margin: 0 auto;
+  padding-top: 1em;
+  max-width: 300px;
+  img{
+    width: 100%;
+  }
+  figcaption{
+    padding-top: 0.5em;
+    font-size: 0.75em;
+    text-align: center;
+  }
+}
 
 // 全新幻獸
 
