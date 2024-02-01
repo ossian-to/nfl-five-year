@@ -6,5 +6,6 @@
   "getGiftD": true,
   "getGiftE": true,
   "getGiftF": true,
-  "getGiftG": true
+  "getGiftG": true,
+  "awardIndex": 0
 }

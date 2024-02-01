@@ -145,7 +145,7 @@ label{
             position: fixed;
             width: 300px;
             height: 100vh;
-            
+
           }
         }
       }
@@ -177,7 +177,7 @@ label{
     background-image: unset;
     background-repeat: unset;
     background-position: unset;
-    background-color: $document-bg-color;
+    // background-color: $document-bg-color;
     transition: width 0.3s ease;
 
     .nav-container{

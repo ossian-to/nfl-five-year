@@ -60,36 +60,251 @@
 
 
 
-    <!-- 童話留言板............................................... -->
+    <!-- 活動說明、時間及購買管道.................................. -->
     <section class="player-gifts">
       <article>
         <figure class="player-gift-title"><img src="assets/images/title-7.png" alt="活動說明"></figure>
         <h3><em>活動時間：</em>2024/03/27(三)16:00~2024/5/02(日)23:59</h3>
-        <div class="design-container">
-          <!-- 對話框 -->
+        <div class="design-container no-padding">
+          <!-- 指定通用卡 -->
           <dl class="fifth">
             <dd>
               活動期間只要購買指定面額「<em>通用卡 1000 點</em>」，直接儲值至「<em>童話:王國復甦 online</em>」內，即可獲得「五周年扭蛋抽取資格 1 次」。儲值不限次數，每儲值１次１張 1000 點即可獲得 1 次抽獎機會，以此類推。
               <p><em>活動僅限「<span class="flash">通用卡 1000 點</span>」面額</em>，其餘面額將無法獲得抽獎機會。</p>
             </dd>
           </dl>
+          <!-- 指定通用卡結束 -->
+          <!-- 通用卡哪裡買 -->
           <dl class="design-note">
             <dt>通用卡哪裡買？</dt>
             <dd>
               <ul class="design-items">
                 <li>通用卡實體購買管道：全省「<em>全家便利商店</em>」均售。</li>
-                <li>通用卡線上購買管道：<a href="" target="_blank">momo購物網</a>、<a href="" target="_blank">GASH商城</a>、<a href="" target="_blank">So-net 遊戲點數</a>。</li>
+                <li>
+                  通用卡線上購買管道：<a href="" target="_blank">momo購物網</a>、<a href="" target="_blank">GASH商城</a>、<a href="" target="_blank">So-net 遊戲點數</a>。
+                  <ol class="online-buy">
+                    <li><a href=""><img src="assets/images/gacha-machine/01-momo.png" alt="momo購物網"></a></li>
+                    <li><a href=""><img src="assets/images/gacha-machine/02-gash.png" alt="GASH商城"></a></li>
+                    <li><a href=""><img src="assets/images/gacha-machine/03-sonet.png" alt="So-net 遊戲點"></a></li>
+                  </ol>
+                </li>
               </ul>
             </dd>
           </dl>
-        </div><!--.design-container end-->
+          <!-- 通用卡哪裡買結束 -->
+        </div><!--.design-container.no-padding end-->
       </article>
     </section>
-    <!-- 童話留言板結束........................................... -->
+    <!-- 活動說明、時間及購買管道結束.............................. -->
 
 
 
-    <!-- 抽取排行加碼禮........................................... -->
+    <!-- 扭蛋活動說明及雪怪扭蛋機.................................. -->
+    <section class="gacha-zone">
+      <article>
+        <dl class="gacha-info">
+          <!-- 扭蛋活動說明 -->
+          <dd>
+            <ul class="gacha-info-list">
+              <li><span>本活動僅限</span>《童話：王國復甦 Online》<span>的玩家參加。</span></li>
+              <li>儲值通用卡 1000 點<span>後，即可獲得一次抽獎機會。</span></li>
+              <li><span>最大獎</span>「童話主題客製化主機」<span>將於活動結束後，</span>5/3 <span>由官方從參與</span>抽取扭蛋達 10 次的玩家名單中抽出<span>，並於官網進行公告。</span></li>
+              <li><span>抽中實體獎勵請至與官方聯繫得獎事宜。</span></li>
+              <li><span>抽中虛擬獎勵可至『置物櫃』中領取獎勵。『獎勵』從置物櫃領出後，「第一個登入遊戲的角色」將會自動領取。如果開錯角色登入領取到『獎勵』無轉移服務。</span></li>
+              <li><span>獎勵不限制伺服器領取且回饋不限次數。</span></li>
+              <li><span>儲值限單筆通用卡 1000 轉入，金額與獎勵不累計，但可與其它儲值活動同時領取。</span></li>
+            </ul>
+          </dd>
+          <!-- 扭蛋活動說明結束 -->
+
+          <!-- 
+            雪怪扭蛋機設定說明：
+
+            1. .gacha-machine (還未登入雷爵會員) 預設值
+            2. .gacha-machine.logged (已登入雷爵會員，可抽扭蛋)
+            3. .gacha-machine.zone (已登入，但可抽扭蛋的次數為零)(通用卡1000點，可得到一次抽扭蛋的機會)
+            4. .gacha-machine.unstart (已登錄，活動未開始)
+            5. .gacha-machine.finished (已登錄，活動已結束)
+
+           -->
+          <div class="gacha-machine logged">
+            <figure class="gacha-chat">
+              <div class="text-1">請先登入<br>雷爵會員</div>
+              <div class="text-2">還可以<br>抽 <em>5</em> 次</div>
+              <div class="text-3">已抽完。</div>
+              <div class="text-4">活動未開始</div>
+              <div class="text-5">活動已結束</div>
+            </figure>
+            <button class="gacha-btn"><span>扭蛋機的按鈕</span></button>
+            <div class="lager-member2">
+              <a href="https://member.lager.com.tw/" target="_blank"><img src="assets/images/gacha-machine/lager-member.png" alt="登入雷爵會員"></a>
+            </div>
+            <figure class="gacha-ball"><img src="assets/images/gacha-machine/lottery-ball.png" alt="落下的球"></figure>
+            <figure class="gacha-body"><img src="assets/images/gacha-machine/lottery-bg.png" alt="雪怪扭蛋機"></figure>
+            <figure class="gacha-hole"><img src="assets/images/gacha-machine/lottery-hole.png" alt="球洞"></figure>
+          </div>
+          <!-- 雪怪扭蛋機 -->
+          <dd></dd>
+          <!-- 雪怪扭蛋機結束 -->
+        </dl>
+      </article>
+    </section>
+    <!-- 扭蛋活動說明及雪怪扭蛋機結束.............................. -->
+
+
+
+    <!-- 獎品清單................................................. -->
+    <section class="gifts-list">
+      <article>
+        <!-- 分兩欄，左邊是客製主機，右邊是鑰匙圈及虛寶列表 -->
+        <dl class="gifts-field">
+          <dd>
+            <!-- 客製主機 -->
+            <figure class="make-pc"><img src="assets/images/gacha-machine/pc.png" alt="客製主機"></figure>
+            <!-- 客製主機的規格清單 -->
+            <ul class="pc-list">
+              <li>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i5 processor 14600K【14核/20緒】4.0G(↑5.3G)/24M</li>
+              <li>ASUS TUF GAMING B760M-BTF WIFI</li>
+              <li>Kingston 32GB DDR5-6000/CL36 FURY Beast BlacK RGB</li>
+              <li>ASUS Dual GeForce RTX 4060 White OC 8GB</li>
+              <li>WD 黑標 SN850X 1TB M.2 NVMe PCIe SSD</li>
+              <li>darkFlash MOTI 鏡之島 白 顯卡長39/CPU高17/全景玻璃透側/M-ATX</li>
+              <li>ASUS PRIME 750W Gold 雙8/金牌/全模組/ATX3.0(PCIe 5.0)</li>
+              <li>darkFlash Twister DX-240 Ver2.6 白 冰風俠水冷頭</li>
+              <li>Windows 11 中文家用彩盒版 64位元 (USB)</li>
+            </ul>
+            <!-- 客製主機的規格清單結束 -->
+            <figure class="get-pc-photo"><img src="assets/images/gacha-machine/photo.png" alt="得獎者照片"></figure>
+          </dd>
+          <dd>
+            <hgroup class="hr"><h2>高級虛寶抽就送</h2></hgroup>
+            <!-- 鑰匙圈及虛寶清單 -->
+            <ul class="gift-items">
+              <li>
+                <figure id="key"><img src="assets/images/icons/2.png" alt="童話隨機鑰匙圈"></figure>
+                <h4>童話隨機鑰匙圈</h4>
+                <div class="number"><em>抽取數量</em>20</div>
+                <div class="probability">機率：1%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/3.png" alt="星域之謎"></figure>
+                <h4>星域之謎</h4>
+                <div class="number"><em>抽取數量</em>20</div>
+                <div class="probability">機率：1%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/4.png" alt="封印幻獸-布偶龍"></figure>
+                <h4>封印幻獸-布偶龍</h4>
+                <div class="number"><em>抽取數量</em>30</div>
+                <div class="probability">機率：2%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/5.png" alt="寵物降級開水"></figure>
+                <h4>寵物降級開水</h4>
+                <div class="number"><em>抽取數量</em>30</div>
+                <div class="probability">機率：2%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/6.png" alt="寵物降級香檳"></figure>
+                <h4>寵物降級香檳</h4>
+                <div class="number"><em>抽取數量</em>40</div>
+                <div class="probability">機率：2%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/7.png" alt="寵物降級可樂"></figure>
+                <h4>寵物降級可樂</h4>
+                <div class="number"><em>抽取數量</em>40</div>
+                <div class="probability">機率：2%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/8.png" alt="寵物降級汽水"></figure>
+                <h4>寵物降級汽水</h4>
+                <div class="number"><em>抽取數量</em>40</div>
+                <div class="probability">機率：2%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/9.png" alt="生命核心"></figure>
+                <h4>生命核心</h4>
+                <div class="number"><em>抽取數量</em>50</div>
+                <div class="probability">機率：3%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/10.png" alt="宇宙奧秘"></figure>
+                <h4>宇宙奧秘</h4>
+                <div class="number"><em>抽取數量</em>50</div>
+                <div class="probability">機率：3%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/11.png" alt="九級封印石"></figure>
+                <h4>九級封印石</h4>
+                <div class="number"><em>抽取數量</em>60</div>
+                <div class="probability">機率：3%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/12.png" alt="八級封印石"></figure>
+                <h4>八級封印石</h4>
+                <div class="number"><em>抽取數量</em>60</div>
+                <div class="probability">機率：3%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/13.png" alt="隨機lv80夢幻裝備一件"></figure>
+                <h4>隨機lv80<br>夢幻裝備一件</h4>
+                <div class="number"><em>抽取數量</em>60</div>
+                <div class="probability">機率：3%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/14.png" alt="50w可因"></figure>
+                <h4>50w可因</h4>
+                <div class="number"><em>抽取數量</em>60</div>
+                <div class="probability">機率：3%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/15.png" alt="昂貴的代價"></figure>
+                <h4>昂貴的代價</h4>
+                <div class="number"><em>抽取數量</em>70</div>
+                <div class="probability">機率：4%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/16.png" alt="隻手遮天娃娃(偽)"></figure>
+                <h4>隻手遮天娃娃(偽)</h4>
+                <div class="number"><em>抽取數量</em>80</div>
+                <div class="probability">機率：4%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/17.png" alt="界限突破娃娃(偽)"></figure>
+                <h4>界限突破娃娃(偽)</h4>
+                <div class="number"><em>抽取數量</em>80</div>
+                <div class="probability">機率：4%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/18.png" alt="寵物愛心棒"></figure>
+                <h4>寵物愛心棒</h4>
+                <div class="number"><em>抽取數量</em>100</div>
+                <div class="probability">機率：5%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/19.png" alt="寵物甜心糖"></figure>
+                <h4>寵物甜心糖</h4>
+                <div class="number"><em>抽取數量</em>100</div>
+                <div class="probability">機率：5%</div>
+              </li>
+              <li>
+                <figure><img src="assets/images/icons/20.png" alt="安慰獎-神秘OK蹦"></figure>
+                <h4>安慰獎-神秘OK蹦</h4>
+                <div class="number"><em>抽取數量</em>1010</div>
+                <div class="probability">機率：51%</div>
+              </li>
+            </ul>
+            <!-- 鑰匙圈及虛寶清單結束 -->
+          </dd>
+        </dl>
+      </article>
+    </section>
+    <!-- 獎品清單結束............................................. -->
+
+
+
+    <!-- 客製化電競滑鼠墊......................................... -->
     <section class="gifts-info">
       <article>
         <dl class="gift-content">
@@ -107,7 +322,7 @@
         </dl>
       </article>
     </section>
-    <!-- 抽取排行加碼禮結束........................................ -->
+    <!-- 客製化電競滑鼠墊結束..................................... -->
 
 
 
@@ -121,7 +336,7 @@
           <li>限定儲值通用卡指定面額 1000 點數<span>才可參與本次活動獲得獎品，其他面額點數、不同儲值方式皆無法參與。</span></li>
           <li><span>活動開啟 </span>2024/03/27(三)16:00~2024/5/02(日)23:59 期間內儲值<span>才算是參與活動中，提前儲值、太晚儲值將無法參與。</span></li>
           <li><span>抽中「童話主題客製化主機」與「童話隨機鑰匙圈」與「童話主題客製化防水電競滑鼠墊」之獎項中獎人，應於各獎項公佈日起三個月內，主動與雷爵網絡洽繫領獎事宜，凡逾領獎期限 (獎項公佈日起三個月內)，或未完成領獎程序，或不接受開立(免)扣繳憑單者，均視同自動放棄得獎權力。<br>※請透過<a href="https://member.lager.com.tw/support/player_report_list" target="_blank">客服中心-遊戲問題回報</a>詢問。</span></li>
-          <li><span>本活動實體獎勵</span>「童話主題客製化主機」，限『得獎者本人』親至本公司進行領取<span>。領取完畢後，<u>需拍照</u>，官方後續會將此照片進行處理後將於本活動頁上得獎區中更新。<br>※如中獎者為海外玩家，因疫情問題無法親領，可請台灣地區友人協助代領，詳細相關規定與方式，請至客服中心-遊戲問題回報功能詢問。</span></li>
+          <li><span>本活動實體獎勵</span>「童話主題客製化主機」，限『得獎者本人』親至本公司進行領取<span>。領取完畢後，<u>需拍照</u>，官方後續會將此照片進行處理後將於本活動頁上得獎區中更新。<br>※如中獎者為海外玩家，因疫情問題無法親領，可請台灣地區友人協助代領，詳細相關規定與方式，請至<a href="https://member.lager.com.tw/support/player_report_list" target="_blank">客服中心-遊戲問題回報</a>功能詢問。</span></li>
           <li><span>本活動獎項以實物為準，中獎人不得要求更換、轉讓他人或折換現金，除獎項外其他衍生之相關費用由中獎者自行負擔。</span></li>
           <li><span>依中華民國稅法規定，獎項金額超過新台幣 1,000，得獎人須依規定繳交相關單據，並提供身分證件以供核對身份；獎項金額超過新台幣 20,000，國內玩家需支付 10% 稅額 (國外玩家20%) 給予雷爵網絡以便代扣稅金，扣繳義務人為活動得獎人。價格依照原公告價格計算。</span></li>
           <li><span>若中獎玩家帳號的登記資料有誤，導致客服人員無法與玩家取得連繫，或資料回傳後核實身份錯誤，或不願意支付 10% 稅額，均視同放棄領獎，請玩家特別留意。<br>※此點請務必注意，如會員資料不屬實，無法提出相關文件證明是帳號持有本人，視為放棄領獎資格。</span></li>
@@ -135,7 +350,11 @@
 
 
     <!-- 右側懸浮Banner.......................................... -->
-    <div class="fixed"><a href="gacha-machine.html"><img src="assets/images/water-mark-right.png" alt="專屬客製化主機想要趁現在！"></a></div>
+    <div class="fixed">
+      <img src="assets/images/right-menu-01.png">
+      <a href="gacha-list.html"><img src="assets/images/right-menu-02.png"></a>
+      <a href="gacha-machine.html"><img src="assets/images/right-menu-03.png"></a>
+    </div>
     <!-- 右側懸浮Banner結束...................................... -->
 
 
@@ -148,6 +367,77 @@
   </div><!--.ossian end-->
 
 
+  <script>
+  // 獎項的陣列
+  var awards = [
+    { name: '童話隨機鑰匙圈', image: '2.png' },
+    { name: '星域之謎', image: '3.png' },
+    { name: '封印幻獸-布偶龍', image: '4.png' },
+    { name: '寵物降級開水', image: '5.png' },
+    { name: '寵物降級香檳', image: '6.png' },
+    { name: '寵物降級可樂', image: '7.png' },
+    { name: '寵物降級汽水', image: '8.png' },
+    { name: '生命核心', image: '9.png' },
+    { name: '宇宙奧秘', image: '10.png' },
+    { name: '九級封印石', image: '11.png' },
+    { name: '八級封印石', image: '12.png' },
+    { name: '隨機lv80夢幻裝備', image: '13.png' },
+    { name: '50w可因', image: '14.png' },
+    { name: '昂貴的代價', image: '15.png' },
+    { name: '隻手遮天娃娃(偽)', image: '16.png' },
+    { name: '界限突破娃娃(偽)', image: '17.png' },
+    { name: '寵物愛心棒', image: '18.png' },
+    { name: '寵物甜心糖', image: '19.png' },
+    { name: '安慰獎-神秘OK蹦', image: '20.png' }
+  ];
+
+
+  var index = 0; // 使用者中獎的索引，共19組 (0-18)
+  var award = awards[index]; // 抓取索引的獎項
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 取得.gacha-btn按鈕元素
+    var gachaBtn = document.querySelector('.gacha-btn');
+
+    // 設定按鈕元素為 click 事件監聽
+    gachaBtn.addEventListener('click', function () {
+      // 在點擊後將按鈕設為 disabled，避免誤觸或多次點擊。
+      gachaBtn.disabled = true;
+      // 在點選按鈕後增加.rotate class
+      gachaBtn.classList.add('rotate');
+
+      // 等候0.5秒後，在.gacha-ball的地方增加.down class
+      setTimeout(function () {
+        var gachaBall = document.querySelector('.gacha-ball');
+        gachaBall.classList.add('down');
+
+        // 等候0.3秒後，彈出sweetalert2對話視窗
+        // 內容為得獎資訊，下面是一則範例：
+        setTimeout(function () {
+          Swal.fire({
+            html: `<h3>恭喜獲得：【${award.name}】x1</h3><img src="assets/images/icons/${award.image}">`
+          }).then((result) => {
+            // 當使用者關閉sweetalert2對話視窗後，移除 disabled、.rotate及.down class
+            gachaBtn.disabled = false;
+            gachaBtn.classList.remove('rotate');
+            gachaBall.classList.remove('down');
+          });
+        }, 300); // 等候0.3秒
+      }, 500);   // 等候0.5秒
+    });
+
+    // 取得圖片元素
+    var keyImage = document.getElementById('key');
+    // 設定圖片元素為 click 事件監聽
+    keyImage.addEventListener('click', function () {
+      // 彈出sweetalert2對話視窗
+      Swal.fire({
+        html: '<h3><span style="color: #f75050;">限量 20 個</span>，<br>扭蛋時將有機會可加碼獲得 1 個，抽完為止。</h3>'
+      });
+    });
+  });
+  </script>
 
 </body>
 

@@ -42,12 +42,12 @@ ul.nav{
   font-weight: bold;
   line-height: 1.4;
   // background-image: url(../images/bg.png);
-  background-image: url(../images/demo.png);
+  // background-image: url(../images/demo.png);
   background-repeat: no-repeat;
   background-position: top center;
-  &.lo{
-    background-image: url(../images/gacha-machine/bg.jpg);
-  }
+  // &.lo{
+  //   background-image: url(../images/gacha-machine/bg.jpg);
+  // }
 }
 
 button.btn{
@@ -80,7 +80,7 @@ button.btn{
 .game-logo{
   display: block;
   margin: 0 auto;
-  padding-top: 6em;
+  // padding-top: 6em;
   max-width: 196px;
 }
 
@@ -902,6 +902,10 @@ dl.comment{
 }
 
 // 分頁
+.page-zone{
+  padding-bottom: 2em;
+  text-align: center;
+}
 article.page-group{
   text-align: center;
 }
@@ -1022,6 +1026,40 @@ ul.design-items{
   }
 }
 
+ol.online-buy{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  margin: 0;
+  padding: 1em 0 0 0;
+  list-style: none;
+  li{
+    &:nth-of-type(1){
+      max-width: 206px;
+    }
+    &:nth-of-type(2){
+      max-width: 127px;
+    }
+    &:nth-of-type(3){
+      max-width: 158px;
+    }
+    a{
+      
+      &:hover{
+        img{
+          transform: scale(0.9);
+        }
+      }
+      img{
+        transform: scale(1);
+        width: 100%;
+        transition: transform 0.3s;
+      }
+    }
+  }
+}
+
 // 獎品資訊
 
 section.gifts-info{
@@ -1101,6 +1139,110 @@ dl.fifth{
     padding-top: 0.5em;
     font-size: 0.75em;
     text-align: center;
+  }
+}
+
+// 獎品清單
+
+.gifts-list{
+  padding: 1em;
+}
+
+dl.gifts-field{
+  display: flex;
+  
+  // align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  dd{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    color: $custom-10;
+    // &:nth-of-type(1){
+    //   max-width: 349px;
+    // }
+    // &:nth-of-type(2){
+    //   width: 100%;
+    // }
+  }
+}
+
+ul.pc-list{
+  margin: 0;
+  padding-right: 1em;
+  li{
+    padding: 0.25em 0;
+    line-height: 1.25;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+figure.make-pc{
+  margin: 0 auto;
+  max-width: 349px;
+  img{
+    width: 100%;
+  }
+}
+
+figure.get-pc-photo{
+  margin: 0 auto;
+  padding: 1em 0;
+  max-width: 300px;
+  img{
+    width: 100%;
+    // border: 10px solid white;
+    // border-radius: 10px;
+  }
+}
+
+ul.gift-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em 0.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $custom-2;
+  li{
+    padding: 1em 0.5em;
+    text-align: center;
+    width: 100%;
+    background-color: $custom-1;
+    border: solid 5px $custom-2;
+    border-radius: 10px;
+    figure{
+      img{
+        border-radius: 5px;
+      }
+    }
+    > h4{
+      margin: 0;
+      padding: 0.5em 0 0.35em;
+      font-size: 1.125em;
+      line-height: 1.25;
+    }
+    > .number{
+      font-size: 1.25em;
+      color: #ff9040;
+      em{
+        margin-right: 0.25em;
+        padding: 0.15em 0.5em;
+        font-size: 0.875rem;
+        font-style: normal;
+        color: #286f9c;
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+    }
+    >.probability{
+      padding: 0.5em 0 0;
+    }
   }
 }
 
@@ -1230,6 +1372,374 @@ figure.heart-img{
   }
   100%{
     transform: translateY(0);
+  }
+}
+
+// 扭蛋活動 layout
+
+dl.gacha-info{
+  margin: 0 auto;
+  display: grid;
+  gap: 0 1em;
+  max-width: 1200px;
+}
+
+// 扭蛋活動說明
+
+ul.gacha-info-list{
+  padding: 0 1em 0 2em;
+  font-size: 1.25em;
+  color: white;
+  li{
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  span{
+    color: $custom-9;
+  }
+}
+
+// 雪怪扭蛋機
+
+.gacha-machine{
+  position: relative;
+  margin: 0 auto;
+  max-width: 734px;
+  > figure{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.gacha-chat{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1em;
+  // left: 1em;
+  // width: 202px;
+  // height: 152px;
+  // font-size: 1.75em;
+  line-height: 1.25;
+  background-image: url(../images/gacha-machine/chat.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 3;
+  animation: float 1s infinite;
+  &::before{
+    content: '';
+    position: absolute;
+    // bottom: -0.5em;
+    // right: -0.35em;
+    // width: 63px;
+    // height: 52px;
+    background-image: url(../images/gacha-machine/chat-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: float 1s infinite;
+  }
+  em{
+    color: red;
+    font-style: normal;
+  }
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4,
+  .text-5{
+    display: none;
+  }
+}
+.gacha-btn{
+  position: absolute;
+  background-image: url(../images/gacha-machine/lottery-button.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: unset;
+  outline: unset;
+  z-index: 3;
+  cursor: pointer;
+  animation: zoom2 1s infinite;
+  span{
+    display: none;
+  }
+  &.rotate{
+    animation: btnRotate 0.5s ease-out;
+  }
+}
+
+@keyframes btnRotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.lager-member2{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3em;
+  width: 100%;
+  z-index: 3;
+  a{
+    max-width: 380px;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.gacha-body{
+  position: relative;
+  z-index: 2;
+  img{
+    width: 100%;
+  }
+}
+.gacha-ball{
+  position: absolute;
+  bottom: 8em;
+  z-index: 2;
+  
+  img{
+    width: 100%;
+  }
+  &.down{
+    bottom: 0;
+    transition: bottom 0.3s ease-out;
+  }
+}
+
+.gacha-hole{
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  img{
+    width: 100%;
+  }
+}
+
+// 雪怪扭蛋機的設定
+
+.gacha-machine{
+  .text-1{
+    display: unset;
+  }
+  .gacha-ball,
+  .gacha-btn{
+    display: none;
+  }
+  &.logged{
+    .text-2{
+      display: unset;
+    }
+    .gacha-ball,
+    .gacha-btn{
+      display: unset;
+    }
+    .text-1,
+    .lager-member2{
+      display: none;
+    }
+  }
+  &.zone{
+    .text-3{
+      display: unset;
+    }
+    .gacha-ball,
+    .gacha-btn{
+      display: unset;
+    }
+    .text-1,
+    .gacha-ball,
+    .gacha-btn,
+    .lager-member2{
+      display: none;
+    }
+  }
+  &.unstart{
+    .text-4{
+      display: unset;
+    }
+    .gacha-ball,
+    .gacha-btn{
+      display: unset;
+    }
+    .text-1,
+    .gacha-ball,
+    .gacha-btn,
+    .lager-member2{
+      display: none;
+    }
+  }
+  &.finished{
+    .text-5{
+      display: unset;
+    }
+    .gacha-ball,
+    .gacha-btn{
+      display: unset;
+    }
+    .text-1,
+    .gacha-ball,
+    .gacha-btn,
+    .lager-member2{
+      display: none;
+    }
+  }
+}
+
+// table setting
+
+table.table{
+  width: 100%;
+  line-height: 1;
+  border-collapse: collapse;
+  thead{
+    color: $custom-9;
+    border-bottom: 3px solid $custom-9;
+    tr{
+      th{
+        padding-bottom: 0.5em;
+        font-size: 0.875em;
+        &:nth-child(1),
+        &:nth-child(3){
+          width: 60px;
+        }
+      }
+    }
+  }
+  tbody{
+    tr{
+      background-color: white;
+      border-bottom: 1px solid $custom-9;
+      transition: background-color 0.3s;
+      td{
+        padding: 0.25em 0;
+        em.time{
+          display: block;
+          font-size: 12px;
+          line-height:2;
+        }
+        &:nth-child(2){
+          text-align: left;
+        }
+        &:nth-child(3){
+          text-align: center;
+        }
+      }
+      &:hover{
+        background-color: $custom-1;
+      }
+    }
+  }
+}
+
+// 椰子島
+
+.island{
+  margin: 0 auto;
+  padding: 0 1em 1em 1em;
+  max-width: 755px;
+  img{
+    width: 100%;
+  }
+}
+
+// 鑰匙圈的 popup
+
+#key{
+  margin: 0 auto;
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  &::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    animation: big 0.3s infinite;
+  }
+}
+
+@keyframes big {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.status{
+  .records{
+    display: none;
+  }
+  &.logged{
+    .records{
+      display: unset;
+    }
+    .lager-member-zone{
+      display: none;
+    }
+  }
+}
+
+.record-list{
+  .no-records{
+    display: none;
+  }
+  &.no-record{
+    .no-records{
+      display: unset;
+    }
+    .record-exists{
+      display: none;
+    }
+  }
+}
+
+dl.no-records{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.25em;
+  width: 100%;
+  dd{
+    padding: 1rem 1rem 0 1rem;
+    border-top: 1px dotted $custom-3;
+  }
+}
+
+// 我要參加
+
+.join{
+  padding-top: 0.5em;
+  text-align: center;
+  a{
+    padding: 0.15em 0.5em 0.25em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: $custom-3;
+    border-radius: 5em;
   }
 }
 
