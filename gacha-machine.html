@@ -16,7 +16,10 @@
   <meta property="og:site_name" content="童話：歡慶復甦5周年，扭蛋抽抽樂：獨家童話電腦主機和全新幻獸布偶龍、多項高級虛寶抽就送!">
 
   <script src="assets/js/sweetalert2.js"></script>
+  <script src="assets/js/glightbox.js"></script>
+  
   <link rel="stylesheet" href="assets/css/all.css?v=1">
+  <link rel="stylesheet" href="assets/css/glightbox.css">
 </head>
 
 <body>
@@ -160,21 +163,18 @@
         <dl class="gifts-field">
           <dd>
             <!-- 客製主機 -->
-            <figure class="make-pc"><img src="assets/images/gacha-machine/pc.png" alt="客製主機"></figure>
+            <figure class="make-pc"><a href="assets/images/photos/photos-3.jpg" class="glightbox"><img src="assets/images/gacha-machine/pc.png" alt="客製主機"></a></figure>
+            <div class="pc-description">
+              為慶祝<em>童話：王國復甦邁入五周年</em>，我們很榮幸地推出了這款<em>童話主題的限量版主機</em>。這款主機是由童話官方團隊設計，並獲得了<em>官方的授權</em>。
+              <p>這款主機的設計充滿了童話的元素，讓你在遊戲的世界中感受到無與倫比的臨場感。而且，<em>這款主機的生產數量僅此一台，真正的限量版！</em></p>
+              <p>別錯過這個機會，擁有這款獨一無二的童話五周年紀念款主機，讓你的遊戲體驗更上一層樓！</p>
+            </div>
             <!-- 客製主機的規格清單 -->
-            <ul class="pc-list">
-              <li>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i5 processor 14600K【14核/20緒】4.0G(↑5.3G)/24M</li>
-              <li>ASUS TUF GAMING B760M-BTF WIFI</li>
-              <li>Kingston 32GB DDR5-6000/CL36 FURY Beast BlacK RGB</li>
-              <li>ASUS Dual GeForce RTX 4060 White OC 8GB</li>
-              <li>WD 黑標 SN850X 1TB M.2 NVMe PCIe SSD</li>
-              <li>darkFlash MOTI 鏡之島 白 顯卡長39/CPU高17/全景玻璃透側/M-ATX</li>
-              <li>ASUS PRIME 750W Gold 雙8/金牌/全模組/ATX3.0(PCIe 5.0)</li>
-              <li>darkFlash Twister DX-240 Ver2.6 白 冰風俠水冷頭</li>
-              <li>Windows 11 中文家用彩盒版 64位元 (USB)</li>
-            </ul>
+            <figure class="host"><img src="assets/images/gacha-machine/host.png" id="host" alt="客製主機"></figure>
             <!-- 客製主機的規格清單結束 -->
-            <figure class="get-pc-photo"><img src="assets/images/gacha-machine/photo.png" alt="得獎者照片"></figure>
+            <!-- 得獎者照片 -->
+            <figure class="get-pc-photo"><img src="assets/images/gacha-machine/photo.png" id="host" alt="得獎者照片，5月3日公佈"></figure>
+            <!-- 得獎者照片結束 -->
           </dd>
           <dd>
             <hgroup class="hr"><h2>高級虛寶抽就送</h2></hgroup>
@@ -436,9 +436,32 @@
         html: '<h3><span style="color: #f75050;">限量 20 個</span>，<br>扭蛋時將有機會可加碼獲得 1 個，抽完為止。</h3>'
       });
     });
-  });
-  </script>
 
+
+    // 客製主機
+    var hostx = document.getElementById('host');
+
+    // 設定圖片元素為 click 事件監聽
+    hostx.addEventListener('click', function () {
+      // 彈出sweetalert2對話視窗
+      Swal.fire({
+        html: '<h3>客製主機規格</h3><ul><li>Intel i5-14500【14核/20緒】2.6GHz(↑5G)/24M/UHD770/65W</li><li>技嘉 Z790 AORUS ELITE AX DDR5</li><li>金士頓 32GB（16GB*2）DDR5-5600 CL36 FURY Beast RGB</li><li>WD 黑標 SN770 1TB</li><li>技嘉 RTX4060 EAGLE OC 8G</li><li>微星 MAG A650BN 650W 銅牌</li><li>E. DarkFlash DLK4000 客製化套餐</li><li>DARKFLASH DX360 V2 ARGB V2. 6 白</li><li>DarkFlash InFinity 8 PWM A-RGB 風扇 白</li><li>微軟 WINDOWS 11 中文家用隨機版</li><li>其它：A. RGB燈板套件、機殼圖樣設計、UV圓噴圖印刷、Wifi藍芽天線、電源線、三年店內保固</li></ul>'
+      });
+    });
+
+
+  });
+
+
+
+  // glightbox 設定
+  var lightbox = GLightbox();
+  lightbox.on('open', (target) => {
+    console.log('lightbox opened');
+  });
+
+
+</script>
 </body>
 
 </html>

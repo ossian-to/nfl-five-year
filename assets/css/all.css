@@ -2253,6 +2253,15 @@ figure.make-pc img {
   width: 100%;
 }
 
+figure.host {
+  margin: 0 auto;
+  max-width: 300px;
+}
+figure.host img {
+  width: 100%;
+  cursor: pointer;
+}
+
 figure.get-pc-photo {
   margin: 0 auto;
   padding: 1em 0;
@@ -2262,6 +2271,49 @@ figure.get-pc-photo img {
   width: 100%;
 }
 
+.pc-description {
+  font-size: 20px;
+}
+.pc-description mark {
+  color: #f75050;
+  background-color: #ffe7ac;
+  -webkit-animation: colorFlash 0.8s infinite;
+          animation: colorFlash 0.8s infinite;
+}
+.pc-description em {
+  font-style: normal;
+  color: white;
+}
+
+@-webkit-keyframes colorFlash {
+  0% {
+    color: #f75050;
+    background-color: #ffe7ac;
+  }
+  50% {
+    color: #ffe7ac;
+    background-color: #ef40ff;
+  }
+  100% {
+    color: #f75050;
+    background-color: #ffe7ac;
+  }
+}
+
+@keyframes colorFlash {
+  0% {
+    color: #f75050;
+    background-color: #ffe7ac;
+  }
+  50% {
+    color: #ffe7ac;
+    background-color: #ef40ff;
+  }
+  100% {
+    color: #f75050;
+    background-color: #ffe7ac;
+  }
+}
 ul.gift-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2880,7 +2932,7 @@ footer {
     background-image: url(../images/bg-m2.png);
   }
   .game-logo {
-    padding-top: 1em;
+    padding-top: 14em;
   }
   ul.gifts-group {
     -webkit-box-orient: vertical;

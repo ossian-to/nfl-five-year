@@ -1188,6 +1188,14 @@ figure.make-pc{
     width: 100%;
   }
 }
+figure.host{
+  margin: 0 auto;
+  max-width: 300px;
+  img{
+    width: 100%;
+    cursor: pointer;
+  }
+}
 
 figure.get-pc-photo{
   margin: 0 auto;
@@ -1195,9 +1203,38 @@ figure.get-pc-photo{
   max-width: 300px;
   img{
     width: 100%;
+
     // border: 10px solid white;
     // border-radius: 10px;
   }
+}
+
+.pc-description{
+  font-size: 20px;
+  mark{
+    color: $custom-3;
+    background-color: $custom-10;
+    animation: colorFlash 0.8s infinite;
+  }
+  em{
+    font-style: normal;
+    color: white;
+  }
+}
+@keyframes colorFlash{
+  0%{
+    color: $custom-3;
+    background-color: $custom-10;
+  }
+  50%{
+    color: $custom-10;
+    background-color: $color-pink-2;
+  }
+  100%{
+    color: $custom-3;
+    background-color: $custom-10;
+  }
+  
 }
 
 ul.gift-items{
